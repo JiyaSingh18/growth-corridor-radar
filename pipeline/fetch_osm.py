@@ -1,13 +1,13 @@
 """Fetch OpenStreetMap features around each candidate corridor via the Overpass API.
 
-Stdlib only, so it runs anywhere (we run it in a GitHub Actions job, see
-.github/workflows/fetch-osm.yml). Output: data/raw/osm_<id>.json
+Stdlib only, so it runs anywhere. Output: data/raw/osm_<id>.json
 Data (c) OpenStreetMap contributors, ODbL 1.0.
 """
 import json, os, sys, time, urllib.parse, urllib.request
 
 RADIUS_M = 20000
 MIRRORS = [
+    "https://overpass.openstreetmap.fr/api/interpreter",
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
     "https://overpass.private.coffee/api/interpreter",
@@ -37,7 +37,7 @@ def fetch(q):
     data = urllib.parse.urlencode({"data": q}).encode()
     last = None
     for attempt in range(6):
-        url = MIRRORS[attempt % len(MIRRORS)]
+        url = MIRRORS[(attempt // 2) % len(MIRRORS)]
         try:
             req = urllib.request.Request(url, data=data, headers={"User-Agent": "growth-corridor-radar/1.0 (github.com/JiyaSingh18)"})
             with urllib.request.urlopen(req, timeout=300) as r:

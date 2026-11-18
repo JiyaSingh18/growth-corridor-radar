@@ -1,0 +1,31 @@
+{
+ "_note": "Demand & activity signals. 'published' values are official/press-reported figures (see src). 'proxy' values are analyst estimates used where no public series was obtainable tonight - replace with measured data before real use.",
+ "metros": [
+  {"name":"Mumbai","lat":18.94,"lon":72.83},{"name":"Pune","lat":18.52,"lon":73.86},{"name":"Delhi","lat":28.61,"lon":77.21},
+  {"name":"Lucknow","lat":26.85,"lon":80.95},{"name":"Nagpur","lat":21.15,"lon":79.09},{"name":"Bengaluru","lat":12.97,"lon":77.59},
+  {"name":"Hyderabad","lat":17.39,"lon":78.49},{"name":"Ahmedabad","lat":23.02,"lon":72.57},{"name":"Panaji","lat":15.49,"lon":73.83}
+ ],
+ "tourism": {
+  "ayodhya": {"kind":"published","series":{"2017":1.78,"2018":1.96,"2019":2.05,"2020":0.62,"2021":1.57,"2022":2.39,"2023":5.76,"2024":16.44},"unit":"crore visitors/yr","src":"UP Tourism Dept via PTI, Oct 2025 (https://www.ptinews.com/stories-detail/national/record-tourist-footfall-in-ayodhya-this-year-more-to-visit-for-deepotsav/3020052/0); Union Tourism Ministry reply in Parliament, Feb 2025 (https://theprint.in/india/substantial-rise-in-religious-tourism-to-ayodhya-after-construction-of-ram-temple-govt/2477912/)"},
+  "vrindavan": {"kind":"published","series":{"2023":7.79,"2024":9.01},"unit":"crore visitors/yr (Mathura district)","src":"UP Tourism Dept via Times of India, Jan 2025 (https://timesofindia.indiatimes.com/city/lucknow/up-sees-65-crore-tourists-in-2024-over-17-crore-more-from-2023/articleshow/117610333.cms)"},
+  "goa": {"kind":"published","series":{"2015":0.530,"2016":0.633,"2017":0.774,"2018":0.802,"2019":0.806,"2020":0.332,"2021":0.333,"2022":0.719,"2023":0.863,"2024":1.041},"unit":"crore visitors/yr (state)","src":"Goa Economic Survey 2024-25 (https://www.dpse.goa.gov.in/Economic-Survey-2024-25.pdf); Goa Tourism Dept via CNBC-TV18 Jan 2025"},
+  "alibaug": {"kind":"proxy","growth":0.12},
+  "naigaon": {"kind":"proxy","growth":0.04},
+  "panvel": {"kind":"proxy","growth":0.05},
+  "dapoli": {"kind":"proxy","growth":0.10},
+  "nagpur": {"kind":"proxy","growth":0.05},
+  "karjat": {"kind":"proxy","growth":0.09},
+  "palghar": {"kind":"proxy","growth":0.04},
+  "nashik": {"kind":"proxy","growth":0.07},
+  "shirdi": {"kind":"proxy","growth":0.06},
+  "jewar": {"kind":"proxy","growth":0.03}
+ },
+ "ntl_growth_proxy": {
+  "_note": "Proxy for VIIRS/Black Marble (VNP46A4) annual radiance growth 2019->2024 within 20 km, as a fraction. NOT measured in this build (Black Marble needs a NASA Earthdata login). See pipeline/README.md for how to replace.",
+  "alibaug":0.22,"naigaon":0.30,"panvel":0.45,"dapoli":0.12,"nagpur":0.25,"karjat":0.28,"palghar":0.20,"nashik":0.18,"shirdi":0.15,"goa":0.27,"ayodhya":0.55,"vrindavan":0.24,"jewar":0.40
+ },
+ "land_price_2026_synthetic": {
+  "_note": "SYNTHETIC indicative plotted-land price, INR per sq ft, 2026. Plausibly calibrated, not quoted from any listing.",
+  "alibaug":5200,"naigaon":3800,"panvel":7400,"dapoli":1900,"nagpur":2600,"karjat":2900,"palghar":1700,"nashik":2300,"shirdi":1800,"goa":6100,"ayodhya":4300,"vrindavan":3600,"jewar":3900
+ }
+}
