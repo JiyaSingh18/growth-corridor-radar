@@ -29,10 +29,11 @@ export default function App() {
     const base = import.meta.env.BASE_URL
     const get = (f: string) => fetch(`${base}data/${f}`).then(r => { if (!r.ok) throw new Error(`${f}: ${r.status}`); return r.json() })
     Promise.all([get('corridors.json'), get('hexes.json'), get('model.json')])
-      .then(([c, h, m]) => { setData(c); setHexData(h); setModel(m); setCompare(c.corridors.filter((x: { hoabl: boolean }) => x.hoabl).slice(0, 3).map((x: { id: string }) => x.id)) })
+      .then(([c, h, m]) => { setData(c); setHexData(h); setModel(m); setCompare(['ayodhya', 'goa', 'alibaug'].filter(id => c.corridors.some((x: { id: string }) => x.id === id))) })
       .catch(e => setError(String(e)))
   }, [])
   useEffect(() => { const f = () => setTab(readTab()); window.addEventListener('hashchange', f); return () => window.removeEventListener('hashchange', f) }, [])
+  useEffect(() => { const f = (e: KeyboardEvent) => { if (e.key === 'Escape') setSelected(null) }; window.addEventListener('keydown', f); return () => window.removeEventListener('keydown', f) }, [])
   const go = useCallback((t: Tab) => { window.location.hash = `/${t}`; setTab(t) }, [])
 
   const scores = useMemo(() => {

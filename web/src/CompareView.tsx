@@ -17,7 +17,7 @@ export default function CompareView({ data, scenario, scores, ranked, compare, t
     ['Radar score', id => scores[id].toFixed(0)],
     ['Rank', id => `#${ranked.indexOf(id) + 1}`],
     ['P50 growth / yr', id => fmtPct(res[id].p50)],
-    ['5-yr range (P10–P90)', id => `${fmtPct(fiveYr(res[id].p10), 0)} – ${fmtPct(fiveYr(res[id].p90), 0)}`],
+    ['5-yr range (P10–P90)', id => `${fmtPct(fiveYr(res[id].p10), 0)}–${fmtPct(fiveYr(res[id].p90), 0)}`],
     ['Nearest catalyst', id => `${byId[id].nearby_infra[0].name.split(' – ')[0].split(' (')[0].replace(' Multimodal Corridor', ' corridor').replace(' widening', '')} · ${byId[id].nearby_infra[0].km.toFixed(0)} km`],
     ['Top positive driver', id => byId[id].shap.find(s => s.value > 0)?.label ?? '—'],
     ['Top drag', id => byId[id].shap.find(s => s.value < 0)?.label ?? '—'],
