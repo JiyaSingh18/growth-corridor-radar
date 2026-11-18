@@ -3,7 +3,7 @@
 **Which Indian land market will appreciate next, and why?**
 An explainable data-science app that ranks 13 growth corridors (Alibaug, Naigaon, Panvel/NMIA, Ayodhya, Vrindavan, North Goa/Mopa, Dapoli, Nagpur and more) on a 3D H3 hexagon map, with live weight sliders, what-if infrastructure scenarios, per-corridor SHAP explanations and calibrated 5-year appreciation ranges.
 
-**Live demo:** https://jiyasingh18.github.io/growth-corridor-radar/
+**Live demo:** https://jiyasingh18.github.io/growth-corridor-radar/ (mirror: https://growth-corridor-radar.vercel.app)
 
 ![Radar overview](docs/screenshots/overview.png)
 

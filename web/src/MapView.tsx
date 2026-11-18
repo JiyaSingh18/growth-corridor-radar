@@ -71,11 +71,11 @@ export default function MapView({ corridors, infra, hexes, scores, selected, onS
       transitions: { getRadius: { duration: 500 } },
     }),
     new TextLayer<Corridor>({
-      id: 'labels', data: labelled, getPosition: d => [d.lon, d.lat], getText: d => d.name.split(' (')[0],
+      id: 'labels', data: labelled, getPosition: d => [d.lon, d.lat, zoomedIn ? 16000 : 0], getText: d => d.name.split(' (')[0],
       getSize: zoomedIn ? 15 : 12, getColor: d => d.id === selected || !selected ? [241, 245, 249, 255] : [148, 163, 184, 200],
-      getPixelOffset: [0, zoomedIn ? -60 : -26], fontFamily: 'Inter, sans-serif', fontWeight: 600, characterSet: 'auto',
+      getPixelOffset: [0, zoomedIn ? -18 : -26], fontFamily: 'Inter, sans-serif', fontWeight: 600, characterSet: 'auto',
       outlineWidth: 3, outlineColor: [7, 11, 22, 255], fontSettings: { sdf: true }, billboard: true,
-      updateTriggers: { getColor: [selected], getSize: [zoomedIn], getPixelOffset: [zoomedIn] },
+      updateTriggers: { getColor: [selected], getSize: [zoomedIn], getPixelOffset: [zoomedIn], getPosition: [zoomedIn] },
     }),
   ], [hexes, infra, corridors, labelled, scores, selected, zoomedIn, maxScore, predYear])
 
