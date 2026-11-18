@@ -1,0 +1,15 @@
+[
+ {"id":"alibaug","name":"Alibaug","state":"Maharashtra","lat":18.6414,"lon":72.8722,"hoabl":true},
+ {"id":"naigaon","name":"Naigaon (Vasai–Virar)","state":"Maharashtra","lat":19.3510,"lon":72.8460,"hoabl":true},
+ {"id":"panvel","name":"Panvel / NMIA Zone","state":"Maharashtra","lat":18.9930,"lon":73.1100,"hoabl":false},
+ {"id":"dapoli","name":"Dapoli","state":"Maharashtra","lat":17.7590,"lon":73.1860,"hoabl":true},
+ {"id":"nagpur","name":"Nagpur (MIHAN)","state":"Maharashtra","lat":21.0900,"lon":79.0500,"hoabl":true},
+ {"id":"karjat","name":"Karjat–Khopoli","state":"Maharashtra","lat":18.9100,"lon":73.3250,"hoabl":false},
+ {"id":"palghar","name":"Palghar (Vadhavan)","state":"Maharashtra","lat":19.8800,"lon":72.7700,"hoabl":false},
+ {"id":"nashik","name":"Nashik (Igatpuri)","state":"Maharashtra","lat":19.9975,"lon":73.7898,"hoabl":false},
+ {"id":"shirdi","name":"Shirdi","state":"Maharashtra","lat":19.7650,"lon":74.4770,"hoabl":false},
+ {"id":"goa","name":"North Goa (Mopa)","state":"Goa","lat":15.7000,"lon":73.8100,"hoabl":true},
+ {"id":"ayodhya","name":"Ayodhya","state":"Uttar Pradesh","lat":26.7922,"lon":82.1998,"hoabl":true},
+ {"id":"vrindavan","name":"Vrindavan","state":"Uttar Pradesh","lat":27.5650,"lon":77.6593,"hoabl":true},
+ {"id":"jewar","name":"Jewar (Noida Intl Airport)","state":"Uttar Pradesh","lat":28.1700,"lon":77.6100,"hoabl":false}
+]
